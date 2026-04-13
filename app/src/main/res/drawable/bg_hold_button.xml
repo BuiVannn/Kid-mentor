@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#2E9E6A" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="oval">
+            <solid android:color="#A8D5BE" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#4CAF82" />
+        </shape>
+    </item>
+</selector>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    &lt;!&ndash; Trạng thái đang giữ (pressed) &ndash;&gt;-->
+<!--    <item android:state_pressed="true">-->
+<!--        <shape android:shape="oval">-->
+<!--            <solid android:color="#3B5BDB" />-->
+<!--            <stroke android:width="4dp" android:color="#748FFC" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    &lt;!&ndash; Trạng thái disabled (đang upload/playing) &ndash;&gt;-->
+<!--    <item android:state_enabled="false">-->
+<!--        <shape android:shape="oval">-->
+<!--            <solid android:color="#ADB5BD" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    &lt;!&ndash; Trạng thái bình thường &ndash;&gt;-->
+<!--    <item>-->
+<!--        <shape android:shape="oval">-->
+<!--            <solid android:color="#4C6EF5" />-->
+<!--            <stroke android:width="4dp" android:color="#BAC8FF" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--</selector>-->

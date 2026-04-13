@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="character_size">400dp</dimen>
+    <dimen name="btn_mic_size">72dp</dimen>
+    <dimen name="btn_mic_padding">16dp</dimen>
+    <dimen name="text_greeting">18sp</dimen>
+    <dimen name="text_sub_greeting">20sp</dimen>
+    <dimen name="text_status">14sp</dimen>
+    <dimen name="waveform_height">280dp</dimen>
+</resources>
