@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top promotional bar (Nike style) -->
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#111111"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/topBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PTALK KIDS — AI MENTOR FOR CHILDREN"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:letterSpacing="0.12"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- PTIT Logo - center, will be animated in code -->
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/logo_ptit"
+        android:scaleType="fitCenter"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="48dp" />
+
+    <!-- App name below logo -->
+    <TextView
+        android:id="@+id/tvSplashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PTALK KIDS"
+        android:textSize="32sp"
+        android:textColor="#111111"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08"
+        android:alpha="0"
+        app:layout_constraintTop_toBottomOf="@id/ivSplashLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvSplashSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Mentor · Voice Chat · For Kids"
+        android:textSize="13sp"
+        android:textColor="#707072"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.04"
+        android:alpha="0"
+        app:layout_constraintTop_toBottomOf="@id/tvSplashTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp" />
+
+    <!-- Bottom divider line (Nike style) -->
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E5E5E5"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSplashFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Học viện Công nghệ Bưu chính Viễn thông"
+        android:textSize="11sp"
+        android:textColor="#9E9EA0"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
