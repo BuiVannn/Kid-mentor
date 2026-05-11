@@ -56,18 +56,17 @@ interface PTalkKidsApi {
 class ApiService(private val context: Context) {
 
     companion object {
-        private const val BASE_URL = "http://171.226.10.121:8000/"
         private const val TAG = "ApiService"
     }
 
     private val okHttpClient = OkHttpClient.Builder()
-        .connectTimeout(15, TimeUnit.SECONDS)
-        .readTimeout(60, TimeUnit.SECONDS)
-        .writeTimeout(60, TimeUnit.SECONDS)
+        .connectTimeout(5, TimeUnit.SECONDS)
+        .readTimeout(15, TimeUnit.SECONDS)
+        .writeTimeout(10, TimeUnit.SECONDS)
         .build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
+        .baseUrl(ServerConfig.HTTP_BASE_URL)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
@@ -83,7 +82,10 @@ class ApiService(private val context: Context) {
     // ── 1. Gửi audio, nhận WAV về ─────────────────────────────────────────
     suspend fun sendAudio(audioFile: File, callback: AudioResponseCallback) {
         try {
-            Log.d(TAG, "Đang gửi: ${audioFile.name}, ${audioFile.length()} bytes")
+            Log.d(
+                TAG,
+                "Legacy HTTP send to ${ServerConfig.HTTP_BASE_URL}voice/process: ${audioFile.name}, ${audioFile.length()} bytes"
+            )
 
             val requestFile = audioFile.asRequestBody("audio/mp4".toMediaTypeOrNull())
             val body = MultipartBody.Part.createFormData("file", audioFile.name, requestFile)
@@ -117,16 +119,17 @@ class ApiService(private val context: Context) {
 
         } catch (e: java.net.SocketTimeoutException) {
             Log.e(TAG, "Timeout: ${e.message}")
-            callback.onError("Mạng bị chậm hoặc chờ quá lâu, bé thử lại nhé!")
+            callback.onError("Không kết nối được server. Kiểm tra server demo hoặc mạng.")
         } catch (e: Exception) {
             Log.e(TAG, "Lỗi: ${e.message}")
-            callback.onError("Không kết nối được server. Kiểm tra mạng nhé!")
+            callback.onError("Không kết nối được server. Kiểm tra server demo hoặc mạng.")
         }
     }
 
     // ── 2. Health check trước khi cho ghi âm ─────────────────────────────
     suspend fun isServerHealthy(): Boolean {
         return try {
+            Log.d(TAG, "Health check: ${ServerConfig.HTTP_BASE_URL}voice/health")
             val response = withContext(Dispatchers.IO) { api.healthCheck() }
             val healthy = response.isSuccessful && response.body()?.status == "healthy"
             Log.d(TAG, "Health check: ${if (healthy) "OK ✅" else "FAIL ❌"}")

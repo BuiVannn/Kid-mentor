@@ -17,7 +17,7 @@
     <View
         android:id="@+id/brandAccentLine"
         android:layout_width="0dp"
-        android:layout_height="3dp"
+        android:layout_height="@dimen/brand_accent_height"
         android:background="#D30005"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
     <View
         android:id="@+id/brandBarBg"
         android:layout_width="0dp"
-        android:layout_height="72dp"
+        android:layout_height="@dimen/brand_bar_height"
         android:background="#F5F5F5"
         app:layout_constraintTop_toBottomOf="@id/brandAccentLine"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +36,11 @@
     <!-- CTS Logo — left side -->
     <ImageView
         android:id="@+id/ivBrandCts"
-        android:layout_width="72dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/brand_cts_width"
+        android:layout_height="@dimen/brand_cts_height"
         android:src="@drawable/logo_cts"
         android:scaleType="fitCenter"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/brand_side_margin"
         app:layout_constraintTop_toTopOf="@id/brandBarBg"
         app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
         app:layout_constraintStart_toStartOf="parent" />
@@ -49,9 +49,9 @@
     <View
         android:id="@+id/brandSeparator"
         android:layout_width="1dp"
-        android:layout_height="28dp"
+        android:layout_height="@dimen/brand_separator_height"
         android:background="#CACACB"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/brand_separator_margin_start"
         app:layout_constraintTop_toTopOf="@id/brandBarBg"
         app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
         app:layout_constraintStart_toEndOf="@id/ivBrandCts" />
@@ -62,7 +62,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/brand_text_margin_start"
         app:layout_constraintTop_toTopOf="@id/brandBarBg"
         app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
         app:layout_constraintStart_toEndOf="@id/brandSeparator"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PTALK KIDS"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_brand_title"
             android:textColor="#111111"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.06" />
@@ -81,20 +81,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lab CTS · PTIT"
-            android:textSize="10sp"
+            android:textSize="@dimen/text_brand_subtitle"
             android:textColor="#707072"
             android:fontFamily="sans-serif"
-            android:layout_marginTop="1dp" />
+            android:layout_marginTop="@dimen/space_xs" />
     </LinearLayout>
 
     <!-- PTIT Logo — right side -->
     <ImageView
         android:id="@+id/ivBrandPtit"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/brand_ptit_size"
+        android:layout_height="@dimen/brand_ptit_size"
         android:src="@drawable/logo_ptit"
         android:scaleType="fitCenter"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/brand_side_margin"
         app:layout_constraintTop_toTopOf="@id/brandBarBg"
         app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -120,7 +120,7 @@
         android:text="Xin chào!"
         android:textSize="@dimen/text_greeting"
         android:textColor="#6BAF8A"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/space_m"
         app:layout_constraintTop_toBottomOf="@id/brandBarBottomLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -134,9 +134,9 @@
         android:textStyle="bold"
         android:textColor="#2E7D52"
         android:gravity="center"
-        android:layout_marginTop="4dp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:layout_marginTop="@dimen/space_xs"
+        android:paddingStart="@dimen/space_xl"
+        android:paddingEnd="@dimen/space_xl"
         app:layout_constraintTop_toBottomOf="@id/tvGreeting"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -180,7 +180,7 @@
         android:text="Chạm để ghi âm"
         android:textSize="@dimen/text_status"
         android:textColor="#8BAF9A"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/space_s"
         app:layout_constraintBottom_toTopOf="@id/btnCancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -189,16 +189,16 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
-        android:layout_height="44dp"
+        android:layout_height="@dimen/btn_cancel_height"
         android:text="⏹  Dừng lại"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_btn_cancel"
         android:textColor="#FFFFFF"
         android:background="@drawable/bg_cancel_button"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:paddingStart="@dimen/space_xl"
+        android:paddingEnd="@dimen/space_xl"
         android:visibility="gone"
         android:elevation="4dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/space_s"
         app:layout_constraintBottom_toTopOf="@id/btnHoldToTalk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -211,8 +211,8 @@
         android:src="@drawable/ic_mic_custom"
         android:background="@drawable/bg_hold_button"
         android:scaleType="centerInside"
-        android:padding="18dp"
-        android:layout_marginBottom="32dp"
+        android:padding="@dimen/btn_mic_padding"
+        android:layout_marginBottom="@dimen/space_xxl"
         android:elevation="6dp"
         android:contentDescription="Ghi âm"
         app:layout_constraintBottom_toBottomOf="parent"

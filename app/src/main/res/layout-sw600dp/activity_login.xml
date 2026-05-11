@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/login_min_height">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/contentStartGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/contentEndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <View
+            android:id="@+id/loginAccentLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_accent_height"
+            android:background="#D30005"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/loginBrandHeader"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_header_height"
+            android:background="#FAFAFA"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/login_header_padding_h"
+            android:paddingEnd="@dimen/login_header_padding_h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAccentLine">
+
+            <ImageView
+                android:layout_width="@dimen/login_cts_logo_width"
+                android:layout_height="@dimen/login_cts_logo_height"
+                android:adjustViewBounds="true"
+                android:contentDescription="CTS"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_cts" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/login_header_separator_height"
+                android:layout_marginStart="@dimen/login_header_separator_margin"
+                android:layout_marginEnd="@dimen/login_header_separator_margin"
+                android:background="#CACACB" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.06"
+                    android:text="PTALK KIDS"
+                    android:textColor="#111111"
+                    android:textSize="@dimen/text_login_header_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:fontFamily="sans-serif"
+                    android:text="AI Mentor · Lab CTS · PTIT"
+                    android:textColor="#707072"
+                    android:textSize="@dimen/text_login_header_subtitle" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/login_ptit_logo_size"
+                android:layout_height="@dimen/login_ptit_logo_size"
+                android:adjustViewBounds="true"
+                android:contentDescription="PTIT"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_ptit" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/loginHeaderDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#E5E5E5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginBrandHeader" />
+
+        <ImageView
+            android:id="@+id/ivLoginHero"
+            android:layout_width="@dimen/login_hero_size"
+            android:layout_height="@dimen/login_hero_size"
+            android:layout_marginTop="@dimen/tablet_login_hero_top"
+            android:contentDescription="PTIT logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_ptit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginHeaderDivider" />
+
+        <TextView
+            android:id="@+id/tvLoginHeadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:lineSpacingMultiplier="0.95"
+            android:text="CHÀO MỪNG\nBẠN TRỞ LẠI"
+            android:textColor="#111111"
+            android:textSize="@dimen/text_login_headline"
+            app:layout_constraintEnd_toStartOf="@id/contentEndGuide"
+            app:layout_constraintStart_toStartOf="@id/contentStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/ivLoginHero" />
+
+        <TextView
+            android:id="@+id/tvLoginSubheadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingStart="@dimen/tablet_login_subheadline_side_padding"
+            android:paddingEnd="@dimen/tablet_login_subheadline_side_padding"
+            android:text="Đăng nhập để tiếp tục học cùng AI Mentor"
+            android:textColor="#707072"
+            android:textSize="@dimen/text_login_subheadline"
+            app:layout_constraintEnd_toStartOf="@id/contentEndGuide"
+            app:layout_constraintStart_toStartOf="@id/contentStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginHeadline" />
+
+        <LinearLayout
+            android:id="@+id/loginFormCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tablet_login_form_top_margin"
+            android:layout_marginStart="@dimen/tablet_login_form_side_margin"
+            android:layout_marginEnd="@dimen/tablet_login_form_side_margin"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/contentEndGuide"
+            app:layout_constraintStart_toStartOf="@id/contentStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginSubheadline">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_xs"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.10"
+                android:text="TÊN ĐĂNG NHẬP"
+                android:textColor="#707072"
+                android:textSize="@dimen/text_login_label" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:background="@drawable/bg_input_field"
+                android:fontFamily="sans-serif"
+                android:hint="Nhập tên đăng nhập..."
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/input_padding_h"
+                android:paddingEnd="@dimen/input_padding_h"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textColorHint="#9E9EA0"
+                android:textSize="@dimen/text_input" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:layout_marginBottom="@dimen/space_xs"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.10"
+                android:text="MẬT KHẨU"
+                android:textColor="#707072"
+                android:textSize="@dimen/text_login_label" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:background="@drawable/bg_input_field"
+                android:fontFamily="sans-serif"
+                android:hint="Nhập mật khẩu..."
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/input_padding_h"
+                android:paddingEnd="@dimen/input_padding_h"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textColorHint="#9E9EA0"
+                android:textSize="@dimen/text_input" />
+
+            <TextView
+                android:id="@+id/tvLoginError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textColor="#D30005"
+                android:textSize="@dimen/text_login_error"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/space_xl"
+                android:background="@drawable/bg_login_button"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_login_button" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E5E5E5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  hoặc  "
+                    android:textColor="#9E9EA0"
+                    android:textSize="@dimen/text_login_footer" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E5E5E5" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGuest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/space_m"
+                android:background="@drawable/bg_guest_button"
+                android:text="VÀO XEM THỬ"
+                android:textColor="#111111"
+                android:textSize="@dimen/text_guest_button" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLoginFooter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_footer_top"
+            android:layout_marginBottom="@dimen/space_footer_bottom"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="@dimen/tablet_login_footer_side_padding"
+            android:paddingEnd="@dimen/tablet_login_footer_side_padding"
+            android:text="© 2025 Lab CTS · Học viện Bưu chính Viễn thông PTIT · Mọi quyền được bảo lưu."
+            android:textColor="#9E9EA0"
+            android:textSize="@dimen/text_login_footer"
+            app:layout_constraintEnd_toStartOf="@id/contentEndGuide"
+            app:layout_constraintStart_toStartOf="@id/contentStartGuide"
+            app:layout_constraintTop_toBottomOf="@id/loginFormCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

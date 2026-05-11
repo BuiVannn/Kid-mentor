@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/brandAccentLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/brand_accent_height"
+        android:background="#D30005"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/brandBarBg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/brand_bar_height"
+        android:background="#F5F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brandAccentLine" />
+
+    <ImageView
+        android:id="@+id/ivBrandCts"
+        android:layout_width="@dimen/brand_cts_width"
+        android:layout_height="@dimen/brand_cts_height"
+        android:layout_marginStart="@dimen/brand_side_margin"
+        android:contentDescription="CTS"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_cts"
+        app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brandBarBg" />
+
+    <View
+        android:id="@+id/brandSeparator"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/brand_separator_height"
+        android:layout_marginStart="@dimen/brand_separator_margin_start"
+        android:background="#CACACB"
+        app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
+        app:layout_constraintStart_toEndOf="@id/ivBrandCts"
+        app:layout_constraintTop_toTopOf="@id/brandBarBg" />
+
+    <LinearLayout
+        android:id="@+id/brandTextBlock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/brand_text_margin_start"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
+        app:layout_constraintEnd_toStartOf="@id/ivBrandPtit"
+        app:layout_constraintStart_toEndOf="@id/brandSeparator"
+        app:layout_constraintTop_toTopOf="@id/brandBarBg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.06"
+            android:text="PTALK KIDS"
+            android:textColor="#111111"
+            android:textSize="@dimen/text_brand_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:fontFamily="sans-serif"
+            android:text="Lab CTS · PTIT"
+            android:textColor="#707072"
+            android:textSize="@dimen/text_brand_subtitle" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivBrandPtit"
+        android:layout_width="@dimen/brand_ptit_size"
+        android:layout_height="@dimen/brand_ptit_size"
+        android:layout_marginEnd="@dimen/brand_side_margin"
+        android:contentDescription="PTIT"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_ptit"
+        app:layout_constraintBottom_toBottomOf="@id/brandBarBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brandBarBg" />
+
+    <View
+        android:id="@+id/brandBarBottomLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E5E5E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brandBarBg" />
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tablet_main_greeting_top_margin"
+        android:text="Xin chào!"
+        android:textColor="#6BAF8A"
+        android:textSize="@dimen/text_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brandBarBottomLine" />
+
+    <TextView
+        android:id="@+id/tvSubGreeting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tablet_main_sub_greeting_top_margin"
+        android:layout_marginStart="@dimen/tablet_main_sub_greeting_side_margin"
+        android:layout_marginEnd="@dimen/tablet_main_sub_greeting_side_margin"
+        android:gravity="center"
+        android:text="Hôm nay, tớ có thể giúp gì cho cậu?"
+        android:textColor="#2E7D52"
+        android:textSize="@dimen/text_sub_greeting"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+
+    <com.buivan.ptalk_child.WaveformView
+        android:id="@+id/waveformView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:enabled="false"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/tablet_main_center_side_margin"
+        android:layout_marginEnd="@dimen/tablet_main_center_side_margin"
+        android:layout_marginTop="@dimen/tablet_main_center_top_margin"
+        android:layout_marginBottom="@dimen/tablet_main_center_bottom_margin"
+        app:layout_constraintBottom_toTopOf="@id/tvStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubGreeting" />
+
+    <ImageView
+        android:id="@+id/ivCharacter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:contentDescription="AI character"
+        android:enabled="false"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/char_idle1"
+        app:layout_constraintBottom_toBottomOf="@id/waveformView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/waveformView"
+        app:layout_constraintHeight_max="@dimen/tablet_character_max_size"
+        app:layout_constraintStart_toStartOf="@id/waveformView"
+        app:layout_constraintTop_toTopOf="@id/waveformView"
+        app:layout_constraintVertical_bias="0.50"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_max="@dimen/tablet_character_max_size"
+        app:layout_constraintWidth_percent="0.90" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_s"
+        android:text="Giữ nút để nói chuyện"
+        android:textColor="#8BAF9A"
+        android:textSize="@dimen/text_status"
+        app:layout_constraintBottom_toTopOf="@id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/btn_cancel_height"
+        android:layout_marginBottom="@dimen/space_s"
+        android:background="@drawable/bg_cancel_button"
+        android:paddingStart="@dimen/space_xl"
+        android:paddingEnd="@dimen/space_xl"
+        android:text="⏹  Dừng lại"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_btn_cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/micTouchContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/micTouchContainer"
+        android:layout_width="@dimen/tablet_main_mic_hit_size"
+        android:layout_height="@dimen/tablet_main_mic_hit_size"
+        android:layout_marginBottom="@dimen/tablet_main_mic_bottom_margin"
+        android:elevation="@dimen/tablet_main_mic_elevation"
+        android:padding="@dimen/tablet_main_mic_hit_padding"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnHoldToTalk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_hold_button_tablet"
+            android:clickable="true"
+            android:contentDescription="Ghi âm"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            android:importantForAccessibility="yes"
+            android:minWidth="@dimen/touch_target_min_size"
+            android:minHeight="@dimen/touch_target_min_size"
+            android:padding="@dimen/btn_mic_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic_custom"
+            android:tint="#F7FFFB" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

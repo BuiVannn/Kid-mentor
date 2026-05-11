@@ -10,13 +10,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="700dp">
+        android:minHeight="@dimen/login_min_height">
 
         <!-- ══ TOP RED ACCENT LINE ═════════════════════════════════════════ -->
         <View
             android:id="@+id/loginAccentLine"
             android:layout_width="0dp"
-            android:layout_height="4dp"
+            android:layout_height="@dimen/login_accent_height"
             android:background="#D30005"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +26,11 @@
         <LinearLayout
             android:id="@+id/loginBrandHeader"
             android:layout_width="0dp"
-            android:layout_height="88dp"
+            android:layout_height="@dimen/login_header_height"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
+            android:paddingStart="@dimen/login_header_padding_h"
+            android:paddingEnd="@dimen/login_header_padding_h"
             android:background="#FAFAFA"
             app:layout_constraintTop_toBottomOf="@id/loginAccentLine"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +38,8 @@
 
             <!-- CTS Logo left -->
             <ImageView
-                android:layout_width="72dp"
-                android:layout_height="68dp"
+                android:layout_width="@dimen/login_cts_logo_width"
+                android:layout_height="@dimen/login_cts_logo_height"
                 android:src="@drawable/logo_cts"
                 android:scaleType="fitCenter"
                 android:contentDescription="CTS" />
@@ -47,10 +47,10 @@
             <!-- Separator -->
             <View
                 android:layout_width="1dp"
-                android:layout_height="36dp"
+                android:layout_height="@dimen/login_header_separator_height"
                 android:background="#CACACB"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp" />
+                android:layout_marginStart="@dimen/login_header_separator_margin"
+                android:layout_marginEnd="@dimen/login_header_separator_margin" />
 
             <!-- App name block -->
             <LinearLayout
@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PTALK KIDS"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/text_login_header_title"
                     android:textColor="#111111"
                     android:fontFamily="sans-serif-medium"
                     android:letterSpacing="0.06" />
@@ -72,16 +72,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AI Mentor · Lab CTS · PTIT"
-                    android:textSize="11sp"
+                    android:textSize="@dimen/text_login_header_subtitle"
                     android:textColor="#707072"
                     android:fontFamily="sans-serif"
-                    android:layout_marginTop="1dp" />
+                    android:layout_marginTop="@dimen/space_xs" />
             </LinearLayout>
 
             <!-- PTIT Logo right -->
             <ImageView
-                android:layout_width="68dp"
-                android:layout_height="68dp"
+                android:layout_width="@dimen/login_ptit_logo_size"
+                android:layout_height="@dimen/login_cts_logo_height"
                 android:src="@drawable/logo_ptit"
                 android:scaleType="fitCenter"
                 android:contentDescription="PTIT" />
@@ -101,11 +101,11 @@
         <!-- PTIT Logo big - editorial hero -->
         <ImageView
             android:id="@+id/ivLoginHero"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="@dimen/login_hero_size"
+            android:layout_height="@dimen/login_hero_size"
             android:src="@drawable/logo_ptit"
             android:scaleType="fitCenter"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/space_hero_top"
             app:layout_constraintTop_toBottomOf="@id/loginHeaderDivider"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -116,13 +116,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CHÀO MỪNG\nBẠN TRỞ LẠI"
-            android:textSize="34sp"
+            android:textSize="@dimen/text_login_headline"
             android:textColor="#111111"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lineSpacingMultiplier="0.95"
             android:letterSpacing="0.02"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/space_l"
             app:layout_constraintTop_toBottomOf="@id/ivLoginHero"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -132,13 +132,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đăng nhập để tiếp tục học cùng AI Mentor"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_login_subheadline"
             android:textColor="#707072"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:layout_marginTop="8dp"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"
+            android:layout_marginTop="@dimen/space_s"
+            android:paddingStart="@dimen/subheadline_padding_h"
+            android:paddingEnd="@dimen/subheadline_padding_h"
             app:layout_constraintTop_toBottomOf="@id/tvLoginHeadline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -149,9 +149,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="@dimen/space_xxl"
+            android:layout_marginStart="@dimen/form_margin_h"
+            android:layout_marginEnd="@dimen/form_margin_h"
             app:layout_constraintTop_toBottomOf="@id/tvLoginSubheadline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -161,25 +161,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TÊN ĐĂNG NHẬP"
-                android:textSize="10sp"
+                android:textSize="@dimen/text_login_label"
                 android:textColor="#707072"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.10"
-                android:layout_marginBottom="6dp" />
+                android:layout_marginBottom="@dimen/space_xs" />
 
             <!-- Username input -->
             <EditText
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:hint="Nhập tên đăng nhập..."
-                android:textSize="15sp"
+                android:textSize="@dimen/text_input"
                 android:textColor="#111111"
                 android:textColorHint="#9E9EA0"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/bg_input_field"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:paddingStart="@dimen/input_padding_h"
+                android:paddingEnd="@dimen/input_padding_h"
                 android:inputType="text"
                 android:importantForAutofill="no"
                 android:imeOptions="actionNext"
@@ -190,26 +190,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MẬT KHẨU"
-                android:textSize="10sp"
+                android:textSize="@dimen/text_login_label"
                 android:textColor="#707072"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.10"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="6dp" />
+                android:layout_marginTop="@dimen/space_l"
+                android:layout_marginBottom="@dimen/space_xs" />
 
             <!-- Password input -->
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:hint="Nhập mật khẩu..."
-                android:textSize="15sp"
+                android:textSize="@dimen/text_input"
                 android:textColor="#111111"
                 android:textColorHint="#9E9EA0"
                 android:fontFamily="sans-serif"
                 android:background="@drawable/bg_input_field"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:paddingStart="@dimen/input_padding_h"
+                android:paddingEnd="@dimen/input_padding_h"
                 android:inputType="textPassword"
                 android:importantForAutofill="no"
                 android:imeOptions="actionDone"
@@ -221,24 +221,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="12sp"
+                android:textSize="@dimen/text_login_error"
                 android:textColor="#D30005"
                 android:fontFamily="sans-serif-medium"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/space_s"
                 android:visibility="gone" />
 
             <!-- Login button (Nike Black pill) -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:text="ĐĂNG NHẬP"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_login_button"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.08"
                 android:background="@drawable/bg_login_button"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="@dimen/space_xl"
                 android:elevation="2dp" />
 
             <!-- Divider with text -->
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="24dp">
+                android:layout_marginTop="@dimen/space_xl">
 
                 <View
                     android:layout_width="0dp"
@@ -259,7 +259,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="  hoặc  "
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_login_footer"
                     android:textColor="#9E9EA0"
                     android:fontFamily="sans-serif" />
 
@@ -274,14 +274,14 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnGuest"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:text="VÀO XEM THỬ"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_guest_button"
                 android:textColor="#111111"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.06"
                 android:background="@drawable/bg_guest_button"
-                android:layout_marginTop="12dp" />
+                android:layout_marginTop="@dimen/space_m" />
 
         </LinearLayout>
 
@@ -291,15 +291,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="© 2025 Lab CTS · Học viện Bưu chính Viễn thông PTIT\nMọi quyền được bảo lưu."
-            android:textSize="10sp"
+            android:textSize="@dimen/text_login_footer"
             android:textColor="#9E9EA0"
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:lineSpacingMultiplier="1.5"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="32dp"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
+            android:layout_marginTop="@dimen/space_footer_top"
+            android:layout_marginBottom="@dimen/space_footer_bottom"
+            android:paddingStart="@dimen/login_header_padding_h"
+            android:paddingEnd="@dimen/login_header_padding_h"
             app:layout_constraintTop_toBottomOf="@id/loginFormCard"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

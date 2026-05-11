@@ -1,10 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="character_size">700dp</dimen>
-    <dimen name="btn_mic_size">110dp</dimen>
-    <dimen name="btn_mic_padding">33dp</dimen>
-    <dimen name="text_greeting">50sp</dimen>
-    <dimen name="text_sub_greeting">40sp</dimen>
-    <dimen name="text_status">30sp</dimen>
-    <dimen name="waveform_height">380dp</dimen>
+    <dimen name="character_size">380dp</dimen>
+    <dimen name="btn_mic_size">112dp</dimen>
+    <dimen name="btn_mic_padding">26dp</dimen>
+    <dimen name="text_greeting">26sp</dimen>
+    <dimen name="text_sub_greeting">32sp</dimen>
+    <dimen name="text_status">22sp</dimen>
+    <dimen name="waveform_height">280dp</dimen>
+
+    <dimen name="brand_accent_height">4dp</dimen>
+    <dimen name="brand_bar_height">96dp</dimen>
+    <dimen name="brand_cts_width">108dp</dimen>
+    <dimen name="brand_cts_height">80dp</dimen>
+    <dimen name="brand_ptit_size">90dp</dimen>
+    <dimen name="brand_side_margin">20dp</dimen>
+    <dimen name="brand_separator_height">42dp</dimen>
+    <dimen name="brand_separator_margin_start">12dp</dimen>
+    <dimen name="brand_text_margin_start">14dp</dimen>
+    <dimen name="text_brand_title">20sp</dimen>
+    <dimen name="text_brand_subtitle">16sp</dimen>
+
+    <dimen name="space_xs">6dp</dimen>
+    <dimen name="space_s">12dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">20dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_xxl">40dp</dimen>
+    <dimen name="space_hero_top">44dp</dimen>
+    <dimen name="space_footer_top">12dp</dimen>
+    <dimen name="space_footer_bottom">12dp</dimen>
+    <dimen name="space_bottom_divider_margin">56dp</dimen>
+    <dimen name="space_footer_margin_bottom">24dp</dimen>
+
+    <dimen name="btn_cancel_height">56dp</dimen>
+    <dimen name="text_btn_cancel">20sp</dimen>
+
+    <dimen name="login_min_height">820dp</dimen>
+    <dimen name="login_accent_height">5dp</dimen>
+    <dimen name="login_header_height">96dp</dimen>
+    <dimen name="login_header_padding_h">24dp</dimen>
+    <dimen name="login_cts_logo_width">100dp</dimen>
+    <dimen name="login_cts_logo_height">80dp</dimen>
+    <dimen name="login_ptit_logo_size">90dp</dimen>
+    <dimen name="login_header_separator_height">40dp</dimen>
+    <dimen name="login_header_separator_margin">14dp</dimen>
+    <dimen name="login_hero_size">160dp</dimen>
+    <dimen name="text_login_headline">34sp</dimen>
+    <dimen name="text_login_subheadline">14sp</dimen>
+    <dimen name="text_login_header_title">18sp</dimen>
+    <dimen name="text_login_header_subtitle">13sp</dimen>
+    <dimen name="text_login_label">13sp</dimen>
+    <dimen name="text_input">18sp</dimen>
+    <dimen name="text_login_error">15sp</dimen>
+    <dimen name="text_login_button">18sp</dimen>
+    <dimen name="text_guest_button">18sp</dimen>
+    <dimen name="text_login_footer">11sp</dimen>
+    <dimen name="input_height">54dp</dimen>
+    <dimen name="input_padding_h">20dp</dimen>
+    <dimen name="form_margin_h">48dp</dimen>
+    <dimen name="subheadline_padding_h">40dp</dimen>
+
+    <dimen name="splash_top_bar_height">52dp</dimen>
+    <dimen name="splash_logo_size">220dp</dimen>
+    <dimen name="text_splash_topbar">14sp</dimen>
+    <dimen name="text_splash_title">38sp</dimen>
+    <dimen name="text_splash_subtitle">18sp</dimen>
+    <dimen name="text_splash_footer">14sp</dimen>
+
+    <dimen name="touch_target_min_size">48dp</dimen>
+    <dimen name="tablet_main_center_side_margin">8dp</dimen>
+    <dimen name="tablet_main_center_top_margin">20dp</dimen>
+    <dimen name="tablet_main_center_bottom_margin">20dp</dimen>
+    <dimen name="tablet_character_max_size">620dp</dimen>
+    <dimen name="tablet_main_mic_bottom_margin">42dp</dimen>
+    <dimen name="tablet_main_mic_elevation">20dp</dimen>
+    <dimen name="tablet_main_mic_hit_size">164dp</dimen>
+    <dimen name="tablet_main_mic_hit_padding">18dp</dimen>
+    <dimen name="tablet_main_greeting_top_margin">28dp</dimen>
+    <dimen name="tablet_main_sub_greeting_top_margin">16dp</dimen>
+    <dimen name="tablet_main_sub_greeting_side_margin">24dp</dimen>
+
+    <dimen name="tablet_login_hero_top">20dp</dimen>
+    <dimen name="tablet_login_form_top_margin">18dp</dimen>
+    <dimen name="tablet_login_form_side_margin">12dp</dimen>
+    <dimen name="tablet_login_subheadline_side_padding">28dp</dimen>
+    <dimen name="tablet_login_footer_side_padding">24dp</dimen>
 </resources>
